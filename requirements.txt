@@ -1,0 +1,10 @@
+# Dependencies for deployment
+# This is derived from pyproject.toml
+
+# Core dependencies (none specified in pyproject.toml)
+
+# Dev dependencies for deployment environment
+pytest>=8.0.0
+pytest-cov>=4.1.0
+mypy>=1.8.0
+ruff>=0.1.0
