@@ -90,9 +90,50 @@ uv pip install -e ".[dev]"
 
 ### Running the Application
 
+#### CLI Interface (Command-Line)
+
+The application provides a modern CLI for quick task management:
+
+```bash
+# Add a new task
+todo add "Buy groceries" -d "Milk, eggs, bread"
+
+# List all tasks
+todo list
+
+# List pending tasks only
+todo list --status pending
+
+# List completed tasks only
+todo list --status completed
+
+# Get a specific task
+todo get 1
+
+# Update a task
+todo update 1 -t "New title" -d "New description"
+
+# Mark task as complete
+todo complete 1
+
+# Mark task as incomplete
+todo incomplete 1
+
+# Toggle task status
+todo toggle 1
+
+# Delete a task
+todo delete 1
+
+# Show help
+todo --help
+```
+
+#### Interactive Console UI
+
 ```bash
 # Method 1: Using the installed script
-todo
+todo-interactive
 
 # Method 2: Using Python module
 python -m todo_app.ui
@@ -100,6 +141,33 @@ python -m todo_app.ui
 # Method 3: Direct execution
 python src/todo_app/ui.py
 ```
+
+#### Web UI (Beautiful modern interface)
+
+```bash
+# First install dependencies:
+pip install -e .
+
+# Then run the web server:
+python -m todo_app.web
+
+# Or if installed as package:
+todo-web
+```
+
+### Web UI Features
+
+The application now includes a beautiful, modern web interface with:
+
+- 🎨 **Modern UI Design** - Clean, responsive interface using Bootstrap 5
+- 📱 **Fully Responsive** - Works on mobile, tablet, and desktop
+- 🔄 **Real-time Updates** - See changes instantly without page refresh
+- 📊 **Task Statistics** - Visual counters for total, pending, and completed tasks
+- 🔍 **Filtering** - View all, pending, or completed tasks
+- ✨ **Animations** - Smooth transitions and visual feedback
+- 🎯 **Intuitive Controls** - Easy to add, edit, complete, and delete tasks
+
+Access the web UI at `http://localhost:5000` after starting the server.
 
 ## 📖 Usage Guide
 
