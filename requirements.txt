@@ -1,7 +1,9 @@
 # Dependencies for deployment
 # This is derived from pyproject.toml
 
-# Core dependencies (none specified in pyproject.toml)
+# Core dependencies
+Flask>=2.3.0
+Flask-CORS>=4.0.0
 
 # Dev dependencies for deployment environment
 pytest>=8.0.0

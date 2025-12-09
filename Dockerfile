@@ -13,5 +13,8 @@ RUN pip install --no-cache-dir -e ".[dev]"
 # Set PYTHONPATH to include src directory
 ENV PYTHONPATH=/app/src
 
-# Run the interactive UI when container starts
-CMD ["python", "-m", "todo_app.ui"]
+# Expose port for web application
+EXPOSE 5000
+
+# Run the web application when container starts
+CMD ["python", "-m", "todo_app.web"]

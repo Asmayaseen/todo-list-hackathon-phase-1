@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """
 Demo script showing LifeStepsAI Todo Application functionality.
+
+💡 New: The application now includes a beautiful web UI!
+   Run `python -m todo_app.web` to start the web server and access
+   the modern interface at http://localhost:5000
 """
 
 import sys
