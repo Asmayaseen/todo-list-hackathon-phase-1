@@ -1,13 +1,11 @@
 services:
-  # Todo List Console Application
+  # Todo List Web Application
   - type: web
     name: todo-list-hackathon-phase-1
     runtime: python
     buildCommand: pip install --no-cache-dir -e ".[dev]"
-    startCommand: python -c "from todo_app.ui import main; main()"
+    startCommand: python -m todo_app.web
     envVars:
       - key: PYTHONPATH
         value: /app/src
-    # Note: This is a console app, not a web service
-    # For a console app, you might want to create a web API wrapper in future phases
-    # This configuration allows the app to run in a web environment
+    healthCheckPath: /
